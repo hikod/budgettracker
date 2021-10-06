@@ -1,11 +1,10 @@
 const APP_PREFIX = 'BudgetTracker-';     
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION
-const FILES_TO_CACHE = [
-  "/",  
+const FILES_TO_CACHE = [  
+  "/",
   "/index.html",
   "/css/style.css",
-  "/manifest.json",
   "/js/index.js",
   "/js/idb.js",
   "/icons/icon-72x72.png",
@@ -18,7 +17,7 @@ const FILES_TO_CACHE = [
   "/icons/icon-512x512.png"
 ];
 
-/// Install the service worker
+// Install the service worker
 self.addEventListener('install', function(evt) {
   evt.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
